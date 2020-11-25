@@ -10,15 +10,29 @@ export const Container = styled.div`
     height: 56px;
 
     padding: 0 16px;
+
+    @media (max-width: 768px) {
+        height: 48px;
+        box-shadow: 0 4px 2px -2px rgba(0,0,0,0.2);
+    }
 `
 
 export const Logo = styled.img`
     height: 24px;
     padding: 1px 6px;
+
+    @media (max-width: 768px) {
+        height: 24px;
+    }
 `
 export const Icon = styled.img`
     height: 40px;
     padding: 8px;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
 `
 export const UserAvatar = styled.img`
     height: 32px;
@@ -47,6 +61,27 @@ export const Search = styled.div`
         width: 65px;
         height: 32px;
         border: 1px solid #b8b8b8;
+    }
+
+    @media (max-width: 768px) {
+        
+        justify-content: flex-end;
+        width: unset;
+        flex: 1;
+
+        input {
+            display: none;
+        }
+        
+        button {
+            border: none;
+            background: transparent;
+            
+            svg {
+                height: 20px;
+                width: 20px;
+            }
+        }
     }
 `
 export const Icons = styled.div`
