@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsSearch } from 'react-icons/bs'
 
+
 import logo from '../../assets/logo.png'
 import createVideo from '../../assets/createVideo.png'
 import youtubeApps from '../../assets/youtubeApps.png'
@@ -12,14 +13,20 @@ import {
     Logo,
     Icon,
     Search,
-    Icons
+    Icons,
+    LeftContent,
+    MenuIcon
 } from './styles'
 
 const TopMenu: React.FC = () => {
     return  (
         <Container>
 
-            <Logo src={logo} alt="Logo YouTube"/>
+            <LeftContent>
+                <MenuIcon size={20} />
+
+                <Logo src={logo} alt="Logo YouTube"/>
+            </LeftContent>
             
             <Search>
                 <input type="text" placeholder="Search" />
