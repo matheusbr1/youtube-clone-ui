@@ -6,13 +6,13 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    position: fixed;
-    top: 0px;
-    background: #fff;    
-
     width: 100%;
     height: 56px;
 
+    position: fixed;
+    top: 0px;
+
+    background: #fff;    
     padding: 0 16px;
 `
 
@@ -25,8 +25,10 @@ export const LeftContent = styled.div`
 export const MenuIcon = styled(IoMdMenu)`
     margin: 0 16px 0 0;
     padding: 8px;
+    
     width: 40px;
     height: 40px;
+    
     opacity: 0.7;
 
     @media(max-width: 660px) {
@@ -36,15 +38,16 @@ export const MenuIcon = styled(IoMdMenu)`
 
 export const Logo = styled.img`
     height: 20px;
+    
     padding: 1px 5px;
-    margin: 0 8px;
+    margin-right: 8px;
 `
 
 export const Search = styled.div`
     display: flex;
 
     height: 32px;
-    width: 50%;
+    width: 55%;
     max-width: 648px;
 
     @media (max-width: 660px) {
@@ -58,10 +61,13 @@ export const SearchInput = styled.input`
     width: calc(100% - 65px);
     height: 100%;
     
-    padding: 2px 6px;
+    padding: 2px 10px;
     
     border: 1px solid #b8b8b8;
     border-radius: 2px 2px 0 0;
+    
+    font-size: 16px;
+    line-height: 24px;
 
     @media (max-width: 660px) {
         display: none;
@@ -74,6 +80,8 @@ export const SearchButton = styled.button`
     border: 1px solid #b8b8b8;
     border-radius: 0 2px 2px 0;
 
+    opacity: 0.7;
+
     @media (max-width: 660px) {
         display: none
     }
@@ -82,13 +90,13 @@ export const SearchButton = styled.button`
 export const SearchButtonMobile = styled.div`
     height: 40px;
     width: 40px;
-    padding: 8px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     opacity: 0.7;
+    padding: 8px;
 
     @media (min-width: 660px) {
         display: none
@@ -109,7 +117,7 @@ export const Icons = styled.div`
 export const Icon = styled.img`
     height: 40px;
     padding: 8px;
-    margin: 0 8px;
+    margin: 0 6px;
     opacity: 0.7;
 
     @media (max-width: 660px) {

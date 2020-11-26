@@ -1,11 +1,10 @@
 import React from 'react'
 import { BsSearch } from 'react-icons/bs'
 
-
-import logo from '../../assets/logo.png'
-import createVideo from '../../assets/createVideo.png'
-import youtubeApps from '../../assets/youtubeApps.png'
-import NotificationsBadge from '../../assets/NotificationsBadge.png'
+import logo from '../../assets/TopMenu/logo.png'
+import createVideo from '../../assets/TopMenu/createVideo.png'
+import youtubeApps from '../../assets/TopMenu/youtubeApps.png'
+import NotificationsBadge from '../../assets/TopMenu/NotificationsBadge.png'
 
 import { 
     Container, 
