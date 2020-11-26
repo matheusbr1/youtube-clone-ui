@@ -3,10 +3,18 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
 
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+
     width: 72px;
     height: calc(100vh - 56px);
 
-    background: rgba(100, 100, 100, 0.2);
+    background: rgba(200, 200, 200, 0.2);
+
+    @media(max-width: 660px) {
+        display: none;
+    }
 `
 
 export const Icons = styled.div`

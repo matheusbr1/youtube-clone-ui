@@ -1,15 +1,17 @@
 import React from 'react'
-import { GridApp } from './styles'
+import { Container } from './styles'
 
 import TopMenu from '../components/TopMenu'
 import Sidebar from '../components/Sidebar'
+import GridVideos from '../components/Grid'
 
-const Home: React.FC = ( ) => {
+const Home: React.FC = () => {
     return (
-        <GridApp>
+        <Container>
             <TopMenu />
             <Sidebar />
-        </GridApp>
+            <GridVideos />
+        </Container>
     )
 }   
 

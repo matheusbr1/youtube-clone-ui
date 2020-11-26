@@ -2,10 +2,13 @@ import styled from 'styled-components'
 import { IoMdMenu } from 'react-icons/io'
 
 export const Container = styled.div`
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: fixed;
+    top: 0px;
+    background: #fff;    
 
     width: 100%;
     height: 56px;
@@ -20,11 +23,13 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
     height: 20px;
-    padding: 1px 6px;
+    padding: 1px 5px;
+    margin: 0 8px;
 `
 export const Icon = styled.img`
     height: 40px;
     padding: 8px;
+    margin: 0 8px;
 `
 export const UserAvatar = styled.img`
     height: 32px;
