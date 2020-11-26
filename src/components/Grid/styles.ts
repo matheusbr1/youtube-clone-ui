@@ -4,22 +4,21 @@ export const Container = styled.div`
     
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1%;
+    grid-gap: 2.5% 1.5%;
 
     width: 100%;
-    height: 100vh;
 
+    padding-top: 56px;
     padding-left: calc(72px + 2.5%);
     padding-right: 2.5%;
-    padding-top: 56px;
 
     background: #F9F9F9;
 
     @media(max-width: 660px) {
         grid-template-columns: 1fr;
-        
+        grid-gap: unset;
+
         padding-left: 5%;
         padding-right: 5%;
-
     }
 `

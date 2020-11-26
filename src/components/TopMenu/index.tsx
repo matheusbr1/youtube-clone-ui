@@ -13,6 +13,9 @@ import {
     Logo,
     Icon,
     Search,
+    SearchInput,
+    SearchButton,
+    SearchButtonMobile,
     Icons,
     LeftContent,
     MenuIcon
@@ -24,26 +27,26 @@ const TopMenu: React.FC = () => {
 
             <LeftContent>
                 <MenuIcon size={20} />
-
                 <Logo src={logo} alt="Logo YouTube"/>
             </LeftContent>
             
             <Search>
-                <input type="text" placeholder="Search" />
-                <button>
+                <SearchInput type="text" placeholder="Search" />
+                <SearchButton>
                     <BsSearch />
-                </button>                
+                </SearchButton>                
             </Search>
 
             <Icons>
+                <SearchButtonMobile >
+                    <BsSearch />
+                </SearchButtonMobile>
                 <Icon src={createVideo} alt="Novo vídeo"/>
                 <Icon src={youtubeApps} alt="Youtube Apps"/>
                 <Icon src={NotificationsBadge} alt="Notifications"/>
-
                 <UserAvatar 
                     src='https://yt3.ggpht.com/a-/AOh14GhTiYCPTFR0cQWjvKynpzti-6btplRKWQTlzuMbtF4=s108-c-k-c0x00ffffff-no-rj' 
                 />
-
             </Icons>
 
         </Container>
