@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: grid;
     grid-gap: 2.5% 1.5%;
 
-    background: #F9F9F9;
+    /* background: #F9F9F9; */
     width: 100%;
 
     padding-top: 56px;
