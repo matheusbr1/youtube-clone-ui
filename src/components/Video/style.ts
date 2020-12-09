@@ -23,11 +23,13 @@ export const Thumb = styled.div`
         height: 180px;
     }
 `
-export const UserAvatar = styled.img`
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    margin-right: 12px;
+export const UserAvatar = styled.div`
+    img {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        margin-right: 12px;
+    }
 `
 
 export const VideoInfosContainer = styled.div`

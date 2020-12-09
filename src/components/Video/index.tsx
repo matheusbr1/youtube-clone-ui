@@ -8,9 +8,9 @@ const Video: React.FC = () => {
             <Thumb>Thumb</Thumb>
             
             <VideoInfosContainer>
-                <UserAvatar 
-                    src='https://yt3.ggpht.com/a-/AOh14GhTiYCPTFR0cQWjvKynpzti-6btplRKWQTlzuMbtF4=s108-c-k-c0x00ffffff-no-rj' 
-                />
+                <UserAvatar>
+                    <img src="https://yt3.ggpht.com/a-/AOh14GhTiYCPTFR0cQWjvKynpzti-6btplRKWQTlzuMbtF4=s108-c-k-c0x00ffffff-no-rj" alt=""/>
+                </UserAvatar>
                 <Infos>
                     <p>Hard Rock Music | Best Hard Rock Songs Of 70s 80s 90s</p>
                     <span>Music Collection</span>
