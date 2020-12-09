@@ -5,7 +5,7 @@ const Video: React.FC = () => {
     return (
         <Container>
             
-            <Thumb>Thumb</Thumb>
+            <Thumb src="https://via.placeholder.com/300/F4F4F4/000000/?text=thumb" >Thumb</Thumb>
             
             <VideoInfosContainer>
                 <UserAvatar>

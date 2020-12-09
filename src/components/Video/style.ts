@@ -1,26 +1,28 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    max-width: 360px;    
+    max-width: 360px; 
+    margin-top: 40px;   
 
     @media (max-width: 660px) {
         max-width: 320px;
+        
         margin: auto;
         margin-top: 40px;
     }
 `
 
-export const Thumb = styled.div`
+export const Thumb = styled.img`
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    height: 120px;
+    min-height: 120px;
     background: rgba(200, 200, 200, 0.2);
 
     @media (max-width: 660px) {
-        height: 180px;
+        min-height: 180px;
     }
 `
 export const UserAvatar = styled.div`
