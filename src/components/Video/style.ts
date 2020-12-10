@@ -18,7 +18,8 @@ export const Thumb = styled.img`
     justify-content: center;
 
     height: 184px;
-    width: 328px;
+    /* width: 328px; */
+    width: 100%;
 
     background: rgba(200, 200, 200, 0.2);
 `
