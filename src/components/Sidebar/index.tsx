@@ -11,19 +11,19 @@ const Sidebar: React.FC = () => {
         <Container>
             <Icons>
                 <Icon>
-                    <img src={homeIcon} />
+                    <img src={homeIcon} alt="Home" />
                     <span >Home</span>
                 </Icon>
                 <Icon>
-                    <img src={trendingIcon}/>
+                    <img src={trendingIcon} alt="Trending"/>
                     <span>Trending</span>
                 </Icon>
                 <Icon>
-                    <img src={subscriptionsIcon}/>
+                    <img src={subscriptionsIcon} alt="Subscriptions"/>
                     <span>Subscriptions</span>
                 </Icon>
                 <Icon>
-                    <img src={libraryIcon}/>
+                    <img src={libraryIcon} alt="Library"/>
                     <span>Library</span>
                 </Icon>
             </Icons>
