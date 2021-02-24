@@ -1,19 +1,17 @@
+## Youtube ui Clone (in progress 🚧)
 
-# YouTube UI clone
 Deployed here https://youtube-ui-clone.herokuapp.com/
 
-# Getting Started with Create React App
+![image](https://user-images.githubusercontent.com/28275815/108933639-44ce3200-762a-11eb-963d-47d5dd705691.jpeg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### For execute in your machine ☕
+<pre>
 
-## Available Scripts
+On frontend folder
+$ yarn install
+</pre>
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Built with
+<ul>
+  <li><a href="https://reactjs.org/">React</a></li>
+<ul>
