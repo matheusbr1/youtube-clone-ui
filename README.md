@@ -9,6 +9,7 @@ Deployed here https://youtube-ui-clone.herokuapp.com/
 
 On frontend folder
 $ yarn install
+$ yarn start
 </pre>
 
 ### Built with
