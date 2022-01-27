@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, Avatar, Theme, Typography, Stack } from '@mui/material'
+import React, { useEffect, useState } from 'react'
+import { Box, Avatar, Theme, Typography, Stack, Skeleton } from '@mui/material'
 import { createStyles, makeStyles } from '@mui/styles'
 import { IVideo } from '../../interfaces/IVideo'
   
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       fontWeight: 500,
       marginBottom: theme.spacing(1)
-    }
+    },
   }),
 )
 
@@ -31,6 +31,35 @@ interface VideoProps {
 
 const Video: React.FC<VideoProps> = ({ data }) => {
   const classes = useStyles()
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 2000)
+  }, [])
+
+  if (isLoading) {
+    return (
+      <Box>
+        <Skeleton variant="rectangular" width='100%' >
+          <img src={data.thumb} alt={data.title} className={classes.thumb} />
+        </Skeleton>
+
+        <Box className={classes.infosWrapper} >
+          <Skeleton 
+            variant="circular" 
+            width={40} 
+            height={40} 
+            className={classes.avatar}
+          />
+          
+          <Stack width='80%'>
+            <Skeleton variant="text" className={classes.title} />
+            <Skeleton variant="text" />
+          </Stack>
+        </Box>
+      </Box>
+    )
+  }
 
   return (
     <Box>
