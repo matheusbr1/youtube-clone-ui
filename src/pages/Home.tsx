@@ -1,20 +1,36 @@
-import React from 'react'
-import { Container } from './styles'
-
-import TopMenu from '../components/TopMenu'
-import Sidebar from '../components/Sidebar'
-import GridVideos from '../components/Grid'
-import SuggestionsBar from '../components/SuggestionsBar'
+import React, { useState } from 'react'
+import { videos } from '../mocks/videos'
+import { Box, Container, Grid } from '@mui/material'
+import { AppBar } from '../components/AppBar'
+import Video from '../components/Video'
+import { IVideo } from '../interfaces/IVideo'
 
 const Home: React.FC = () => {
-    return (
-        <Container>
-            <TopMenu />
-            <SuggestionsBar />
-            <Sidebar />
-            <GridVideos />
-        </Container>
-    )
+  const [data] = useState(() => {
+    const arr: IVideo[] = []
+
+    for (let i = 0;  i < 7; i++) {
+      arr.push(...videos)
+    }
+
+    return arr
+  })
+
+  return (
+    <Box mt='100px' mb='40px' >
+      <AppBar />
+
+      <Container>
+        <Grid container spacing={2}>
+          {data.map(video => (
+            <Grid item xs={3}>
+              <Video data={video} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
+  )
 }   
 
 export default Home

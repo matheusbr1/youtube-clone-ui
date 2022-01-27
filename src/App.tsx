@@ -1,13 +1,30 @@
 import React from 'react';
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import { createTheme } from '@mui/material/styles'
 import Home from './pages/Home'
-import { Global } from './styles/global'
+
+const theme = createTheme({
+  typography: {
+    h1: {
+      // color: '#030303',
+      fontSize: '14px',
+    },
+    h2: {
+      color: '#848484',
+      fontSize: '12px'
+    },
+  },
+  palette: {
+    mode: 'dark',
+  },
+})
 
 const App: React.FC = () => {
   return (
-    <>
-      <Global />
+    <ThemeProvider theme={theme} >
       <Home />
-    </>
+      <CssBaseline />
+    </ThemeProvider>
   ) 
 }
 

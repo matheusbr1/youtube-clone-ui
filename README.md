@@ -14,5 +14,6 @@ $ yarn start
 
 ### Built with
 <ul>
-  <li><a href="https://reactjs.org/">React</a></li>
+  <li><a href="https://reactjs.org/">ReactJS</a></li>
+  <li><a href="https://mui.com/">Material UI</a></li>
 <ul>
