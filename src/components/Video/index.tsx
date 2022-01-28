@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Avatar, Theme, Typography, Stack, Skeleton } from '@mui/material'
 import { createStyles, makeStyles } from '@mui/styles'
-import { IVideo } from '../../interfaces/IVideo'
+import { IVideo } from 'interfaces/IVideo'
   
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

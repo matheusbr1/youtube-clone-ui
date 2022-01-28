@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { videos } from '../mocks/videos'
+import { videos } from 'mocks/videos'
 import { Box, Container, Grid } from '@mui/material'
-import { AppBar } from '../components/AppBar'
-import Video from '../components/Video'
-import { IVideo } from '../interfaces/IVideo'
+import { AppBar } from 'components/AppBar'
+import Video from 'components/Video'
+import { IVideo } from 'interfaces/IVideo'
 
 const Home: React.FC = () => {
   const [data] = useState(() => {
