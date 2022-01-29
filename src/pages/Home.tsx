@@ -9,9 +9,7 @@ const Home: React.FC = () => {
   const [data] = useState(() => {
     const arr: IVideo[] = []
 
-    for (let i = 0;  i < 7; i++) {
-      arr.push(...videos)
-    }
+    arr.push(...videos, ...videos)
 
     return arr
   })

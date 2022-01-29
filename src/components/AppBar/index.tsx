@@ -15,7 +15,8 @@ import {
   Tooltip, 
   MenuItem, 
   Theme,
-  InputBase 
+  InputBase,
+  ButtonBase
 } from '@mui/material'
 
 import MenuIcon from '@mui/icons-material/Menu'
@@ -32,6 +33,13 @@ const menuOptions = [
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    container: {
+      paddingRight: theme.spacing(1),
+      paddingLeft: theme.spacing(1),
+    },
+    toolbar: {
+      minHeight: '56px'
+    },
     logo: {
       height: '80px',
       marginTop: '-10px',
@@ -63,6 +71,8 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Search = styled('div')(({ theme }) => ({
   flexGrow: 2,
+  display: 'flex',
+  justifyContent: 'space-between',
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   border: '1px solid #313131',
@@ -87,7 +97,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       width: '20ch',
     },
   },
-}));
+}))
+
+const SearchBox = styled(ButtonBase)(() => ({
+  background: '#313131',
+  height: '40px',
+  width: '64px',
+  '& svg': {
+    width: '24px',
+    height: '24px',
+  }
+}))
 
 export const AppBar = () => {
   const classes = useStyles()
@@ -110,9 +130,9 @@ export const AppBar = () => {
   }
 
   return (
-    <MuiAppBar position="fixed">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <MuiAppBar position="fixed"  >
+      <Container maxWidth={false} disableGutters className={classes.container}>
+        <Toolbar disableGutters className={classes.toolbar} >
           <IconButton
             size="large"
             aria-label="account of current user"
@@ -132,6 +152,9 @@ export const AppBar = () => {
               placeholder="Search"
               inputProps={{ 'aria-label': 'search' }}
             />
+            <SearchBox>
+              <SearchIcon />  
+            </SearchBox>
           </Search>
 
           <IconButton 
