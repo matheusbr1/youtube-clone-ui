@@ -22,8 +22,8 @@ const Home: React.FC = () => {
 
       <Container>
         <Grid container spacing={2}>
-          {data.map(video => (
-            <Grid item key={video.title} lg={3} md={4} sm={6} xs={12}>
+          {data.map((video, index) => (
+            <Grid item key={video.title + index} lg={3} md={4} sm={6} xs={12}>
               <Video data={video} />
             </Grid>
           ))}

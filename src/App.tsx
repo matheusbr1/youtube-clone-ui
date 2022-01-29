@@ -1,9 +1,10 @@
 import React from 'react';
-import { CssBaseline, ThemeProvider } from '@mui/material'
+import { CssBaseline, ThemeProvider, ThemeOptions } from '@mui/material'
 import { createTheme } from '@mui/material/styles'
 import Home from './pages/Home'
+import { useColorMode } from 'hooks/useColorMode';
 
-const theme = createTheme({
+const baseTheme: ThemeOptions = {
   typography: {
     h1: {
       fontSize: '14px',
@@ -12,9 +13,6 @@ const theme = createTheme({
       color: '#848484',
       fontSize: '12px'
     },
-  },
-  palette: {
-    mode: 'dark',
   },
   components: {
     MuiCssBaseline: {
@@ -32,14 +30,28 @@ const theme = createTheme({
         },
       }
     }
-  },
+  }
+}
+
+const dark = createTheme({  ...baseTheme,  palette: {  mode: 'dark' }})
+
+const light = createTheme({ 
+  ...baseTheme, 
+  palette: { 
+    mode: 'light',
+    primary: {
+      main: '#fff'
+    }
+  }
 })
 
 const App: React.FC = () => {
+  const { theme } = useColorMode()
+
   return (
-    <ThemeProvider theme={theme} >
-      <Home />
+    <ThemeProvider theme={theme === 'dark' ? dark : light} >
       <CssBaseline />
+      <Home />
     </ThemeProvider>
   ) 
 }
