@@ -4,7 +4,8 @@ import { createStyles, makeStyles } from '@mui/styles'
 import {
   Theme,
   Chip,
-  Paper
+  Paper,
+  Tabs
 } from '@mui/material'
 
 interface ChipData {
@@ -22,6 +23,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     chip: {
       margin: `0 ${theme.spacing(1)}`
+    },
+    tabs: {
+      minHeight: 'unset',
     }
   })
 )
@@ -45,13 +49,22 @@ export default function ChipsArray() {
 
   return (
     <Paper className={classes.paper}>
-      {chipData.map((data) => (
-        <Chip
-          className={classes.chip}
-          key={data.key}
-          label={data.label}
-        />
-      ))}
+      <Tabs
+        value={null}
+        onChange={() => {}}
+        variant="scrollable"
+        scrollButtons="auto"
+        aria-label="scrollable auto tabs example"
+        className={classes.tabs}
+      >
+        {chipData.map((data) => (
+          <Chip
+            className={classes.chip}
+            key={data.key}
+            label={data.label}
+          />
+        ))}
+      </Tabs>
     </Paper>
   );
 }
