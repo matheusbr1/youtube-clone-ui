@@ -2,7 +2,7 @@
 
 Deployed here https://youtube-ui-clone.herokuapp.com/
 
-![image](https://user-images.githubusercontent.com/28275815/152081610-93a15ec8-bb58-4d22-9f0c-ceae51184170.png)
+![image](https://user-images.githubusercontent.com/28275815/152081714-4f6e9aab-131d-40ca-a68a-fa73cef865eb.png)
 
 ### For execute in your machine ☕
 <pre>
