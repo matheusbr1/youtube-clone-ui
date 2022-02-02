@@ -10,7 +10,9 @@ const Home: React.FC = () => {
   const [data] = useState(() => {
     const arr: IVideo[] = []
 
-    arr.push(...videos, ...videos)
+    for(let i = 0; i < 32; i++) {
+      arr.push(...videos)
+    }
 
     return arr
   })
@@ -18,13 +20,10 @@ const Home: React.FC = () => {
   return (
     <Box>
       <AppBar />
-
-      <Box mt='56px' mb='30px' >
-        <ChipList />
-      </Box>
+      <ChipList />
 
       <Container>
-        <Box>
+        <Box mt='150px' mb='30px' >
           <Grid container spacing={2}>
             {data.map((video, index) => (
               <Grid item key={video.title + index} lg={3} md={4} sm={6} xs={12}>
