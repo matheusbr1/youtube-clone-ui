@@ -1,4 +1,4 @@
-## Youtube UI Clone (in progress 🚧)
+## Youtube UI Clone
 
 Deployed here https://youtube-ui-clone.herokuapp.com/
 
